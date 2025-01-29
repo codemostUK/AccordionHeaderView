@@ -8,7 +8,7 @@
 import UIKit
 
 /// A protocol defining the properties required for an accordion-style header in a view controller.
-protocol AccordionHeaderView: UIViewController {
+public protocol AccordionHeaderView: UIViewController {
 
     /// The minimum allowable height for the accordion header.
     var accordionHeaderMinHeight: CGFloat { get }
@@ -25,7 +25,7 @@ protocol AccordionHeaderView: UIViewController {
     var accordionHeaderHeightHeightConstraint: NSLayoutConstraint! { get set }
 }
 
-protocol AccordionHeaderViewDelegate: AccordionHeaderView {
+public protocol AccordionHeaderViewDelegate: AccordionHeaderView {
 
     /// Determines whether the accordion header view should scroll based on the given offset, scroll direction, and deceleration state.
     ///
@@ -42,7 +42,7 @@ protocol AccordionHeaderViewDelegate: AccordionHeaderView {
 }
 
 /// Extension for `AccordionHeaderViewDelegate` providing the scrolling behavior logic.
-extension AccordionHeaderViewDelegate {
+public extension AccordionHeaderViewDelegate {
 
     /// Determines whether the accordion header view should scroll based on the given offset, scroll direction, and deceleration state.
     ///
