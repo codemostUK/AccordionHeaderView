@@ -6,5 +6,6 @@ target 'AccordionHeaderViewExample' do
   use_frameworks!
 
   # Pods for AccordionHeaderViewExample
+  pod 'AccordionHeaderView'
 
 end
