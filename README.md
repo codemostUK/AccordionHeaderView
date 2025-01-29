@@ -18,19 +18,26 @@ A `UIPageViewController`-based project that integrates an **accordion-style head
 ## 📂 Project Structure
 
 ```
-📁 AccordionHeaderView
-│── 📁 Views
-│   ├── AcordionHeaderView.swift
-│   ├── AcordionHeaderViewClientVC.swift
-│── 📁 Controllers
-│   ├── ViewController.swift
-│   ├── PageViewController.swift
-│   ├── PageContentViewController.swift
-│── 📁 Resources
-│   ├── Main.storyboard
-│   ├── Assets.xcassets
-│── README.md
-│── AccordionHeaderView.xcodeproj
+├── AccordionHeaderView
+│   ├── AccordionHeaderView.swift
+│   ├── AccordionHeaderViewClient.swift
+│   └── AccordionHeaderViewClientVC.swift
+├── Example
+│   ├── AccordionHeaderViewExample
+│   │   ├── AppDelegate.swift
+│   │   ├── Assets.xcassets
+│   │   ├── Base.lproj
+│   │   │   ├── LaunchScreen.storyboard
+│   │   │   └── Main.storyboard
+│   │   ├── Info.plist
+│   │   ├── PageContentViewController.swift
+│   │   ├── PageViewController.swift
+│   │   ├── SceneDelegate.swift
+│   │   └── ViewController.swift
+│   ├── AccordionHeaderViewExample.xcodeproj
+│   └── Podfile
+├── LICENSE
+└── README.md
 ```
 
 ## 🛠️ Setup & Installation
