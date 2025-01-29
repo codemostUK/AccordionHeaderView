@@ -1,4 +1,4 @@
-# PageControlEmbeddedScrollView
+# AccordionHeaderView
 
 A `UIPageViewController`-based project that integrates an **accordion-style header view** with **scrollable pages**.
 
@@ -18,7 +18,7 @@ A `UIPageViewController`-based project that integrates an **accordion-style head
 ## 📂 Project Structure
 
 ```
-📁 PageControlEmbeddedScrollView
+📁 AccordionHeaderView
 │── 📁 Views
 │   ├── AcordionHeaderView.swift
 │   ├── AcordionHeaderViewClientVC.swift
@@ -30,20 +30,25 @@ A `UIPageViewController`-based project that integrates an **accordion-style head
 │   ├── Main.storyboard
 │   ├── Assets.xcassets
 │── README.md
-│── PageControlEmbeddedScrollView.xcodeproj
+│── AccordionHeaderView.xcodeproj
 ```
 
 ## 🛠️ Setup & Installation
 
 1. **Clone the repository**  
    ```sh
-   git clone https://github.com/your-username/PageControlEmbeddedScrollView.git
-   cd PageControlEmbeddedScrollView
+   git clone https://github.com/your-username/AccordionHeaderView.git
+   cd AccordionHeaderView
    ```
 2. **Open in Xcode**  
-   - Open `PageControlEmbeddedScrollView.xcodeproj`
+   - Open `AccordionHeaderView.xcodeproj`
    - Build & run on a simulator or device
 
+
+3. **Install via CocoaPods**
+   ```sh
+   pod 'AccordionHeaderView'
+   ```
 ## 📌 Usage
 
 ### 1️⃣ **Accordion Header Behavior**
