@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.source           = { :git => 'https://github.com/codemostUK/AccordionHeaderView.git',
  								 :tag => s.version.to_s }
-  s.source_files     = '*.{swift}'
+  s.source_files     = 'AccordionHeaderView/*.{swift}'
   s.documentation_url = 'https://github.com/codemostUK/AccordionHeaderView/blob/main/README.md'
   s.requires_arc    = true
   s.ios.deployment_target = '13.0'
