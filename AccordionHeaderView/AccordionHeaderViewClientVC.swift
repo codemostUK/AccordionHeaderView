@@ -21,7 +21,7 @@ open class AccordionHeaderViewClientVC: UIViewController, AccordionHeaderViewCli
     public var targetContentOffset: CGPoint = CGPoint.zero
 
     /// A weak reference to the delegate responsible for handling accordion header behavior.
-    weak public var delegate: (any AccordionHeaderViewDelegate)?
+    weak public var delegate: NSObjectProtocol?
 
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {}
 
