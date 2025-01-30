@@ -63,12 +63,14 @@ open class AccordionHeaderViewClientVC: UIViewController, AccordionHeaderViewCli
         let contentOffsetYDelta = scrollView.contentOffset.y - previousContentOffsetY
 
         // Check if the accordion header should scroll or remain fixed
-        if !pageContentViewControllerDelegate.canIScroll(offsetY: contentOffsetYDelta,
-                                                         scrollDirection: scrollDirection,
-                                                         isDecelerating: scrollView.isDecelerating,
-                                                         targetOfsetYDelta: targetContentOffset.y - scrollView.contentOffset.y) {
-            // Prevent scrolling by resetting content offset to the previous value
-            scrollView.setContentOffset(CGPoint(x: 0, y: previousContentOffsetY), animated: false)
+        if let delegate = pageContentViewControllerDelegate as? AccordionHeaderViewDelegate {
+            if !delegate.canIScroll(offsetY: contentOffsetYDelta,
+                                                             scrollDirection: scrollDirection,
+                                                             isDecelerating: scrollView.isDecelerating,
+                                                             targetOfsetYDelta: targetContentOffset.y - scrollView.contentOffset.y) {
+                // Prevent scrolling by resetting content offset to the previous value
+                scrollView.setContentOffset(CGPoint(x: 0, y: previousContentOffsetY), animated: false)
+            }
         }
     }
 }

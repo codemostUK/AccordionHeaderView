@@ -28,5 +28,5 @@ public protocol AccordionHeaderViewClient {
     /// A reference to the delegate responsible for handling the accordion header's scroll behavior.
     ///
     /// The delegate conforms to `AccordionHeaderViewDelegate`, allowing dynamic header resizing.
-    var delegate: AccordionHeaderViewDelegate? { get set }
+    var delegate: NSObjectProtocol? { get set }
 }
