@@ -1,83 +1,61 @@
 # AccordionHeaderView
 
-A `UIPageViewController`-based project that integrates an **accordion-style header view** with **scrollable pages**.
+A lightweight controller-based layout that embeds an accordion-style header into a `UIPageViewController`. Easily integrate dynamic, collapsible headers with swipeable page content.
+
+![License](https://img.shields.io/github/license/codemostUK/AccordionHeaderView)
+
 
 ## 🚀 Features
 
 - **Accordion Header View** 🏗️  
   Dynamically expands and collapses based on scroll interactions.
-  
+
 - **Embedded Page View Controller** 📖  
   Manages multiple pages within a single scrollable view.
 
 - **Smooth Scrolling Experience** 🎯  
   Handles scroll direction and content offset calculations for seamless navigation.
-  
-  ![animation](Assets/animation.gif)
 
-## 📂 Project Structure
+![animation](Assets/animation.gif)
 
-```
-├── AccordionHeaderView
-│   ├── AccordionHeaderView.swift
-│   ├── AccordionHeaderViewClient.swift
-│   └── AccordionHeaderViewClientVC.swift
-├── Example
-│   ├── AccordionHeaderViewExample
-│   │   ├── AppDelegate.swift
-│   │   ├── Assets.xcassets
-│   │   ├── Base.lproj
-│   │   │   ├── LaunchScreen.storyboard
-│   │   │   └── Main.storyboard
-│   │   ├── Info.plist
-│   │   ├── PageContentViewController.swift
-│   │   ├── PageViewController.swift
-│   │   ├── SceneDelegate.swift
-│   │   └── ViewController.swift
-│   ├── AccordionHeaderViewExample.xcodeproj
-│   └── Podfile
-├── LICENSE
-└── README.md
+
+## 📦 Installation
+
+### CocoaPods
+
+```sh
+pod 'AccordionHeaderView'
 ```
 
-## 🛠️ Setup & Installation
+## 📁 Folder Structure
 
-1. **Clone the repository**  
-   ```sh
-   git clone https://github.com/your-username/AccordionHeaderView.git
-   cd AccordionHeaderView
-   ```
-2. **Open in Xcode**  
-   - Open `AccordionHeaderView.xcodeproj`
-   - Build & run on a simulator or device
+```
+Sources/
+ ├── AccordionHeaderView.swift
+ ├── AccordionHeaderViewClient.swift
+ └── AccordionHeaderViewClientVC.swift
+Example/
+ ├── AccordionHeaderViewExample/
+ │   ├── ViewController.swift
+ │   ├── PageViewController.swift
+ │   ├── PageContentViewController.swift
+ │   └── ...
+ ├── AccordionHeaderViewExample.xcodeproj
+ └── Podfile
+```
 
-
-3. **Install via CocoaPods**
-   ```sh
-   pod 'AccordionHeaderView'
-   ```
 ## 📌 Usage
 
-### 1️⃣ **Accordion Header Behavior**
-- The `AcordionHeaderViewDelegate` handles dynamic height adjustments as the user scrolls.
-- Implemented in `ViewController.swift`.
+### 1️⃣ Accordion Header Behavior
 
-### 2️⃣ **Page Navigation**
-- `PageViewController.swift` manages multiple pages with embedded content.
-- `PageContentViewController.swift` populates the scrollable content.
+The `AcordionHeaderViewDelegate` handles dynamic height adjustments as the user scrolls.  
+Implemented in `ViewController.swift`.
 
-## 📖 Code Overview
+### 2️⃣ Page Navigation
 
-### **AcordionHeaderViewDelegate**
-```swift
-protocol AcordionHeaderViewDelegate: UIViewController {
-    var acordionHeaderMinHeight: CGFloat { get }
-    var acordionHeaderMaxHeight: CGFloat { get }
-    var acordionHeaderHeight: CGFloat { get set }
-}
-```
+`PageViewController.swift` manages multiple pages with embedded content.  
+`PageContentViewController.swift` populates the scrollable content.
 
-### **ViewController (Main Coordinator)**
 ```swift
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "embedPageViewController",
@@ -87,17 +65,6 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 }
 ```
 
-## 🎨 UI Design
-- Uses **Auto Layout** constraints for responsive design.
-- `UIStackView` helps in dynamic content rendering.
+## 📄 License
 
-## 🤝 Contributing
-Pull requests are welcome!  
-For major changes, please open an issue first to discuss what you’d like to change.
-
-## 📜 License
-This project is licensed under the MIT License.
-
----
-
-### 🚀 Happy Coding!
+MIT License. See [LICENSE](LICENSE) for details.
