@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'AccordionHeaderView'
   s.module_name      = 'AccordionHeaderView'
-  s.version          = '1.0.7'
+  s.version          = '1.0.8'
   s.license          = { :type => 'Copyright', :text => <<-LICENSE
 									Copyright 2024
 									Codemost Limited. 
@@ -16,10 +16,10 @@ Pod::Spec.new do |s|
 
   s.source           = { :git => 'https://github.com/codemostUK/AccordionHeaderView.git',
  								 :tag => s.version.to_s }
-  s.source_files     = 'AccordionHeaderView/*.{swift}'
+  s.source_files     = 'Sources/AccordionHeaderView/*.{swift}'
   s.documentation_url = 'https://github.com/codemostUK/AccordionHeaderView/blob/main/README.md'
   s.requires_arc    = true
   s.ios.deployment_target = '13.0'
-  s.swift_version   = '5.5'
+  s.swift_version   = '6'
   s.frameworks = 'UIKit', 'Foundation'
 end

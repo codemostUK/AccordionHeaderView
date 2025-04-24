@@ -8,6 +8,7 @@
 import UIKit
 
 /// A protocol defining the requirements for a scrollable client that interacts with an accordion-style header.
+@MainActor
 public protocol AccordionHeaderViewClient {
 
     /// Stores the previous vertical scroll position of the content.
