@@ -26,6 +26,7 @@ let package = Package(
                       "LICENSE",
                       "README.md"],
             sources: [
+                "Sources/AccordionHeaderView/AccordionHeaderView.swift",
                 "Sources/AccordionHeaderView/AccordionHeaderViewClient.swift",
                 "Sources/AccordionHeaderView/AccordionHeaderViewClientVC.swift",
             ],
