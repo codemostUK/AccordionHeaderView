@@ -19,11 +19,16 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "AccordionHeaderView",
-            exclude: ["../../AccordionHeaderView.podspec",
-                      "../../Assets",
-                      "../../Example",
-                      "../../LICENSE",
-                      "../../README.md"],
+            path: "",
+            exclude: ["AccordionHeaderView.podspec",
+                      "Assets",
+                      "Example",
+                      "LICENSE",
+                      "README.md"],
+            sources: [
+                "Sources/AccordionHeaderView/AccordionHeaderViewClient.swift",
+                "Sources/AccordionHeaderView/AccordionHeaderViewClientVC.swift",
+            ],
             swiftSettings: [
                 .enableExperimentalFeature("StrictConcurrency")
             ]
